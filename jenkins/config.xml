@@ -30,7 +30,14 @@
   <crumbIssuer class="hudson.security.csrf.DefaultCrumbIssuer">
     <excludeClientIPFromCrumb>false</excludeClientIPFromCrumb>
   </crumbIssuer>
-  <nodeProperties/>
+  <nodeProperties>
+    <hudson.node__monitors.DiskSpaceMonitorNodeProperty>
+      <freeDiskSpaceThreshold>0.1GiB</freeDiskSpaceThreshold>
+      <freeTempSpaceThreshold>1GiB</freeTempSpaceThreshold>
+      <freeDiskSpaceWarningThreshold>2GiB</freeDiskSpaceWarningThreshold>
+      <freeTempSpaceWarningThreshold>2GiB</freeTempSpaceWarningThreshold>
+    </hudson.node__monitors.DiskSpaceMonitorNodeProperty>
+  </nodeProperties>
   <globalNodeProperties/>
   <nodeRenameMigrationNeeded>false</nodeRenameMigrationNeeded>
 </hudson>
